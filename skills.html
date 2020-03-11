@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+    <script src="funcoes.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <div class="container">
+        <h2 class="text-center">Bem vindo Devesenvolvedor</h4>
+        <h5 class="text-center">Agora vamos te ajudar a encontrar a conexão ideal</h4>
+        <h4 class="text-center">Nos conte mais um pouco sobre você</h5>
+
+        <!-- Campo para digitar o nome -->
+        <div class="form-group">
+          <label for="username">Digite seu nome completo</label>
+          <input type="text"
+            class="form-control" name="username" id="username" aria-describedby="helpId" placeholder="Nome Completo">
+        </div>
+
+        <!--Campo para escolher seu Cargo Atual -->
+        <div class="form-group">
+          <label for="cargo">Informe seu cargo atual</label>
+          <input type="text"
+            class="form-control" name="cargo" id="cargo" aria-describedby="helpId" placeholder="Ex.: Engenheiro de Dados">
+          <small id="helpId" class="form-text text-muted">Caso não esteja trabalhando informe seu cargo anterior</small>
+        </div>
+
+        <!-- Campo para escolher sua Area de Atuação -->
+        <div class="form-group">
+          <label for="areaAtuacao">Informe seu área de atuação</label>
+          <input type="text"
+            class="form-control" name="areaAtuacao" id="areaAtuacao" aria-describedby="helpId" placeholder="Ex.: Tecnologia">
+          <small id="helpId" class="form-text text-muted"></small>
+        </div>
+
+        <!--Breve descrição sobre seus conhecimentos -->
+        <div class="form-group">
+          <label for="descricao">Faça uma breve descrição sobre você</label>
+          <textarea class="form-control" name="descricao" id="descricao" rows="6"></textarea>
+          <small id="helpId" class="form-text text-muted">Seja Breve</small>
+        </div>
+
+
+        
+        <!-- Seção de escolha das competencias -->
+        <section class="pb_section" id="section-features">
+
+            <h2 class="text-center">Selecione 3 competências</h2>          
+            <div class="row">              
+            <!--Competencia 1-->
+              <div class="col-lg-4 col-md- col-sm-6">
+                <div class="media d-block pb_feature-v1 text-left">
+                  <div class="media-body">
+                      <!-- Input Competecia 1-->
+                      <input type="checkbox" id="OnTradeBusiness" name="scales" value="OnTradeBusiness" >
+                      <label class="mt-0 mb-3 heading" for="scales"><b>On Trade Business</b></label>
+                  </div>
+                  <!--Texto competencia 1-->
+                  <h6>Required Skills</h6>
+                  <div class="media-body">
+                    <p id="txt_OnTradeBusiness">
+                        Data-driven, Business commercial Vision, Opportunity creation
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!--Competencia 2-->
+              <div class="col-lg-4 col-md- col-sm-6">
+                <div class="media d-block pb_feature-v1 text-left">
+                  <div class="media-body">
+                <!--Input Competencia 2-->
+                <input type="checkbox" id="scales" name="scales" value="CustomerAndConsumerCentricity" >
+                <label class="mt-0 mb-3 heading" for="scales"><b>Customer And Consumer Centricity</b></label>
+              </div>
+                  <div class="media-body">
+                    <h6>Required Skills</h6>
+                    <p>Podemos colocar um exemplo, Podemos colocar um exemplo.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md- col-sm-6">
+                <div class="media d-block pb_feature-v1 text-left">
+                  <div class="media-body">
+                <input type="checkbox" id="scales" name="scales" >
+                <label class="mt-0 mb-3 heading" for="scales"><b>Competência 3</b></label>
+              </div>
+                  <div class="media-body">
+                    <h5 class="mt-0 mb-3 heading">Podemos colocar um exemplo</h5>
+                    <p class="text-sans-serif">Podemos colocar um exemplo, Podemos colocar um exemplo.</p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-lg-4 col-md- col-sm-6">
+                <div class="media d-block pb_feature-v1 text-left">
+                  <div class="media-body">
+                <input type="checkbox" id="scales" name="scales" >
+                <label class="mt-0 mb-3 heading" for="scales"><b>Competência 4</b></label>
+              </div>
+                  <div class="media-body">
+                    <h5 class="mt-0 mb-3 heading">Podemos colocar um exemplo</h5>
+                    <p class="text-sans-serif">Podemos colocar um exemplo, Podemos colocar um exemplo.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md- col-sm-6">
+                <div class="media d-block pb_feature-v1 text-left">
+                  <div class="media-body">
+                <input type="checkbox" id="scales" name="scales" >
+                <label class="mt-0 mb-3 heading" for="scales"><b>Competência 5</b></label>
+              </div>
+                  <div class="media-body">
+                    <h5 class="mt-0 mb-3 heading">Podemos colocar um exemplo</h5>
+                    <p class="text-sans-serif">Podemos colocar um exemplo, Podemos colocar um exemplo.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md- col-sm-6">
+                <div class="media d-block pb_feature-v1 text-left">
+                  <div class="media-body">
+                <input type="checkbox" id="scales" name="scales" checked>
+                <label class="mt-0 mb-3 heading" for="scales"><b>Competência 6</b></label>
+              </div>
+                  <div class="media-body">
+                    <h5 class="mt-0 mb-3 heading">Podemos colocar um exemplo</h5>
+                    <p class="text-sans-serif">Podemos colocar um exemplo, Podemos colocar um exemplo.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="finalizarCadastro()">Gravar informações</button>
+            <button type="button" class="btn btn-primary" onclick="validarCheckBox()">Validar checkbox</button>
+
+
+
+
+        <script type="text/javascript">
+          
+          </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
